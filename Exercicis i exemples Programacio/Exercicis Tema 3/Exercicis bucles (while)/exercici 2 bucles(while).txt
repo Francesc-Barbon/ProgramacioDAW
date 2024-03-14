@@ -1,0 +1,30 @@
+Exercici 2 bucles (while)
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double numero, suma, mitja, nombre, majors;
+        majors = 0;
+        suma = 0;
+        mitja = 0;
+	nombre = 0;
+        System.out.println("Introdueix l'edat del primer alumne: ");
+        numero = sc.nextDouble();
+        while (numero >= 0){
+            nombre++;
+	    //suma = suma + numero;
+            suma += numero;
+            mitja = suma/nombre;
+            if(numero >= 18){
+                majors++;
+            }
+            System.out.println("Introdueix l'edat de l'alumne "+(nombre+1)+": ");
+            numero = sc.nextDouble();
+        }
+        System.out.println("La suma d'edats dels alumnes es "+suma);
+        System.out.println("La mitja d'edat dels alunes es "+mitja);
+        System.out.println("El total d'alumnes es "+nombre);
+        System.out.println("Hi ha un total de "+majors+" alumnes majors d'edat");
+    }
+}

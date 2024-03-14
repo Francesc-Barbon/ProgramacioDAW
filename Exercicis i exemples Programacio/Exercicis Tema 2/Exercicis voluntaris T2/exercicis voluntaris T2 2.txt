@@ -1,0 +1,14 @@
+Exercicis voluntaris 2 tema 2
+//Calcular el valor absolut d'un numero
+
+ public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double numero, absolut;
+        System.out.println("Introdueix un nombre: ");
+        numero = sc.nextDouble();
+        absolut = numero > 0? numero:-numero;
+        System.out.println("El valor absolut de "+numero+" es "+absolut);
+    }
+}

@@ -1,0 +1,17 @@
+Exercici 5 IF -ELSE
+
+  public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float numero1, numero2;
+        System.out.println("Introdueix el primer numero");
+        numero1 = sc.nextFloat();
+        System.out.println("Introdueix el segon numero");
+        numero2 = sc.nextFloat();
+        	if(numero1 > numero2){
+		System.out.println("El primer numero es major");
+	} else if(numero1 == numero2){
+		System.out.println("Els dos numeros son iguals");
+        } else {
+                System.out.println("El segon numero es major");
+        }
+    }

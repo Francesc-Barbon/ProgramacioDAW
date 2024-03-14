@@ -1,0 +1,43 @@
+ Exercicis Voluntaris T2 5
+ 
+ public class JavaApplication2{
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero, mil, cent, dec, un;
+        numero = sc.nextInt();
+        mil = numero/1000;
+        cent = (numero%1000)/100;
+        dec = (numero%100)/10;
+        un = numero%10;
+        System.out.println("Mil:  "+mil);
+        System.out.println("Cent:  "+cent);
+        System.out.println("Dec:  "+dec);
+        System.out.println("Un:  "+un);
+        
+        
+        System.out.println("Numero:  "+numero);
+        
+        if(numero >= 0 && numero < 10){
+            System.out.println("No pot ser capicua perque nomes te un digit");
+        } else if (numero >= 100 && numero < 1000){
+            if(cent == un){
+                System.out.println("El numero es capicua");
+            } else {
+                System.out.println("En numero no es capicua");
+            }
+        } else if(numero >= 1000 && numero <= 9999){
+            if(mil == un && cent == dec){
+                System.out.println("El numero es capicua");
+            } else {
+                System.out.println("El numero no es capicua");
+            }
+        } else {
+            if( un == dec){
+                System.out.println("El numero es capicua");
+            } else {
+                System.out.println("El numero no es capicua");
+            }
+        }
+    }
+ }

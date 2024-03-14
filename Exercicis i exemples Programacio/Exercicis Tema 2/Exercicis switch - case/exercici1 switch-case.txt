@@ -1,0 +1,25 @@
+Exercici 1 SWITCH/CASE
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int nota;
+        System.out.println("Introdueix una nota: ");
+        nota = sc.nextInt();
+        switch(nota){
+            case 0,1,2,3,4:
+                System.out.println("Insuficient");
+                break;
+            case 5:
+                System.out.println("Suficient");
+                break;
+            case 6:
+                System.out.println("Be");
+                break;
+            case 7,8:
+                System.out.println("Notable");
+                break;
+            case 9,10:
+                System.out.println("Exelent");
+                break;
+        }
+    }

@@ -1,0 +1,23 @@
+Exercici 4 bucles (for)
+//Calcula el factorial d'un numero
+ public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero;
+        System.out.println("Introdueix un nombre: ");
+        numero = sc.nextInt();
+        int factorial = numero;
+        if(numero > 0){
+        	for(; numero > 1;numero --){
+           	 factorial *= (numero-1);
+        }
+       		 System.out.println("El factorial del numero es: "+factorial);
+        
+        } else { 
+            
+           	 System.out.println("El valor introduit es 0 o negatius");
+        }
+     
+    }
+}

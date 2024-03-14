@@ -1,0 +1,33 @@
+Exercici1 While Segona Opcio
+//Te diu si un numero es positiu/negatiu i parell/imparell
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero = 1;
+        double cuadrat;
+        System.out.println("Introdueix un numero: ");
+        numero = sc.nextInt();
+        while(numero != 0){
+          
+            if(numero > 0){
+                    System.out.println("El numero es positiu");
+            } else {
+                    System.out.println("El numero es negatiu");
+            }
+            if(numero%2 == 0){
+                    System.out.println("El numero es parell");
+            } else {
+                    System.out.println("El numero es imparell");
+            }
+            
+            System.out.println(Math.pow(numero,2));
+            System.out.println("Introdueix un numero: ");
+            numero = sc.nextInt();
+            
+        }
+        
+        
+    }
+        
+}

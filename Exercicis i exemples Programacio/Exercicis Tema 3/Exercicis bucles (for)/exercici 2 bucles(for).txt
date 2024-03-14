@@ -1,0 +1,19 @@
+Exercici 2 bucles (for)
+//Te diu tots els numeros menosr que 100 multiples de7
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+  
+        int numero = 7;
+        
+        for(int i=1; i<100; i++){
+            if(i%7 == 0){
+            System.out.println(""+i+" es multiple de 7");
+            }
+        }
+    }
+}
+
+//Se pot fer fent increments de 7 dins el bucle for i ens estalviam fer l'if dins el bucle
+//El bucle tendria la seguent forma for(int i=7; i<100; i+=7)

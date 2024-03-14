@@ -1,0 +1,22 @@
+ 
+ 
+ public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double magatzem, menjar, suficient;
+        int animals;
+        System.out.println("Introdueix el numero d'animals: ");
+        animals = sc.nextInt();
+        System.out.println("Introdueix els kilos de menjar que tens al magatzem: ");
+        magatzem = sc.nextDouble();
+        System.out.println("Introdueix els kilos que menja cada animal: ");
+        menjar = sc.nextDouble();
+        if(animals > 0){
+             suficient = magatzem/animals >= menjar ? menjar:magatzem/animals;
+             System.out.println("El menjar que se li ha de donar a cada animal es: "+suficient+" Kilos");
+        } else {
+             System.out.println("El numero d'animals no pot ser 0 ni negatiu");
+        }
+    }
+}

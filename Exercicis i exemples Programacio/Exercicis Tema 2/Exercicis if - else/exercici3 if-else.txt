@@ -1,0 +1,16 @@
+Exercici 3 If - ELSE
+
+   public static void main(String[] args) {
+        
+       Scanner sc = new Scanner(System.in);
+       float numero;
+       System.out.println("Introdueix un numero");
+       numero = sc.nextFloat();
+       if((int)numero != 0){
+            System.out.println("El numero no es quasi zero");
+        } else if(numero == 0){
+            System.out.println("El numero no es quasi zero");
+        } else {
+            System.out.println("El numero es quasi zero");
+        }
+    }

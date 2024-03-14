@@ -1,0 +1,25 @@
+Exercici 4 IF - ELSE
+
+ public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float numero1, numero2, numeroMajor, numeroMenor;
+        System.out.println("Introdueix el primer numero");
+        numero1 = sc.nextFloat();
+        System.out.println("Introdueix el segon numero");
+        numero2 = sc.nextFloat();
+        numeroMajor = numero1 > numero2 ? numero1:numero2;
+        numeroMenor = numero1 < numero2 ? numero1:numero2;
+        System.out.println("El major dels numeros es "+numeroMajor+" i el menor dels numeros es "+numeroMenor);
+    }
+
+Versio sense variables auxiliars:
+
+ public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float numero1, numero2, numeroMajor, numeroMenor;
+        System.out.println("Introdueix el primer numero");
+        numero1 = sc.nextFloat();
+        System.out.println("Introdueix el segon numero");
+        numero2 = sc.nextFloat();
+        System.out.println("El major dels numeros es "+numero1>numero2? numero1:numero2+" i el menor dels numeros es "+numero1<numero2? numero1:numero2);
+    }

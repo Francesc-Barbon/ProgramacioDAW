@@ -1,0 +1,37 @@
+Exercici 1 bucles (while)
+//Programa que demana un numero i diu si es positiu o negatiu, parell o imparell
+//i dona el seu quadrat. Acaba el programa quan s'introdueix un 0
+/********************
+ *                  *
+ * @author Francesc *
+ *                  *
+ ********************/                 
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero = 1;
+        double cuadrat;
+        while(numero != 0){
+          
+            System.out.println("Introdueix un numero: ");
+            numero = sc.nextInt();
+            if(numero == 0){break;}
+            if(numero > 0){
+                    System.out.println("El numero es positiu");
+            } else {
+                    System.out.println("El numero es NEGATIU");
+            }
+            if(numero%2 == 0){
+                    System.out.println("El numero es parell");
+            } else {
+                    System.out.println("El numero es imparell");
+            }
+            System.out.println(Math.pow(numero,2));
+            
+        }
+        
+        
+    }
+        
+}

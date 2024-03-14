@@ -1,0 +1,18 @@
+Exercici 3 bucles (for)
+//Demana 10numeros i mostra la mitja
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero, i = 0;
+        double suma = 0;
+        System.out.println("Introdueix un nombre: ");
+        numero = sc.nextInt();
+        for(; i<9; i++){
+            suma = suma + numero;
+            System.out.println("Introdueix un nombre: ");
+            numero = sc.nextInt();
+        }
+        System.out.println("La mitja dels numeros es: "+(suma/i));
+    }
+}

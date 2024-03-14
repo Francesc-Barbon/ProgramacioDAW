@@ -1,0 +1,13 @@
+Exercici 1 bucles(for): Comptador de numeros de 1 a n
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numeroSecret, numero;
+        System.out.println("Introdueix un numero i fare la compta d'es de 1 fins al numero: ");
+        numero = sc.nextInt();
+        for(int i = 1; i <= numero; i++){
+            System.out.println(i);
+        }
+    }
+}

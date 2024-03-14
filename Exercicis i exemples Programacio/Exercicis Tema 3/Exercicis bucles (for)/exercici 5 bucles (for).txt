@@ -1,0 +1,39 @@
+Exercici 5 bucles(for)
+//Demana un nombre d'alumnes, una nota per cada un i mostra 
+//el numero d'aprovats, suspesos i la mitja
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int alumnes, aprovats = 0, suspesos = 0;
+        double nota, suma = 0;
+        System.out.println("Introdueix el nombre d'alumnes: ");
+        alumnes = sc.nextInt();
+        System.out.println("Introdueix la nota del primer alumne: ");
+        nota = sc.nextDouble();
+        for(int i = 1; i<alumnes; i++){
+            
+            if(nota >= 5){
+                aprovats++;
+            } else {
+                suspesos++;
+            }
+            
+            suma += nota;
+            System.out.println(suma);
+            System.out.println("Introdueix la nota de l'alumne "+(i+1)+": ");
+            nota = sc.nextDouble();
+        }
+         if(nota >= 5){
+                aprovats++;
+            } else {
+                suspesos++;
+            }
+        
+        suma += nota;
+        
+        System.out.println("El nombre d'aprovats es: "+aprovats);
+        System.out.println("El nombre de suspesos es: "+suspesos);
+        System.out.println("La mitja de notes es: "+suma/alumnes);
+    }
+}

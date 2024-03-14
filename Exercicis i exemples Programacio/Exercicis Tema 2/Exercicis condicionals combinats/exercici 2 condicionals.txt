@@ -1,0 +1,41 @@
+Exercici 2 Condicionals
+//Calcula l'hora introduida +1 segon
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int hora, minut, segons;
+        System.out.println("Introdueix una hora");
+        hora = sc.nextInt();
+        System.out.println("Introdueix els minuts");
+        minut = sc.nextInt();
+        System.out.println("Introdueix els segons");
+        segons = sc.nextInt();
+        if(hora > 23 || minut > 59 || segons > 59){
+            System.out.println("L'hora introduida no es valida");
+        } else {
+            segons++;
+            if(segons == 60){
+                segons = 0;
+                minut++;
+                if(minut == 60){
+                    minut = 0;
+                    hora++;
+                    if(hora == 24){
+                        hora = 0;
+                        System.out.println("L'hora introduida un segon mes tard es: "+hora+":"+minut+":"+segons);
+                    }else{
+                        System.out.println("L'hora introduida un segon mes tard es: "+hora+":"+minut+":"+segons);
+                    }
+                } else {
+                    System.out.println("L'hora introduida un segon mes tard es: "+hora+":"+minut+":"+segons);
+                }
+            } else {
+                 System.out.println("L'hora introduida un segon mes tard es: "+hora+":"+minut+":"+segons);
+            }
+        } 
+    }
+}

@@ -1,0 +1,22 @@
+Exercici 3 bucles(while): Joc del numero aleatori
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numeroSecret, numero;
+        numeroSecret = (int) (Math.random()*100 + 1);
+        System.out.println("Introdueix un numero de l'1 al 100 i endivina el secret: ");
+        numero = sc.nextInt();
+        while(numeroSecret != numero){
+            if(numero < numeroSecret){
+                System.out.println("El "+numero+" es incorrecte!! El numero secret en major");
+            } else {
+                System.out.println("El "+numero+" es incorrecte!! El numero secret en menor");
+            }
+             System.out.println("Introdueix un altre numero i endivina el secret: ");
+             numero = sc.nextInt();
+        }
+        System.out.println("Correcte!! "+numero+" es el numero secret");
+    }
+}
