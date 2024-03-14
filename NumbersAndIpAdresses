@@ -1,0 +1,118 @@
+//https://www.codewars.com/kata/5936371109ca68fe6900000c
+public class NumberAndIPAddress {
+
+	public static String numberAndIPaddress(String s) {
+
+    if(s.contains(".")){//Si la direccion esta en formato IP
+      
+      String[] adress = (s.split("\\."));
+      int[] numAd = new int[adress.length];
+      int numero = 0;
+      long numero2 = 0;
+      for(int i = 0; i < adress.length; i++){
+        numAd[i] = Integer.valueOf(adress[i]);
+      }
+   
+      String newAdress = "";
+      newAdress = decToBin(numAd[0])+decToBin(numAd[1])+decToBin(numAd[2])+decToBin(numAd[3]);
+  
+      numero = binToDec(newAdress);
+      numero2 = binToLong(newAdress);
+      
+      if(numero < numero2){ //Hay que tener en cuentas numeros que se pasen del rango int
+        String num = Long.toString(numero2);
+        return num;
+      } 
+        String num = Integer.toString(numero);
+        return num;
+      
+      
+      } //Si la direccion esta en formato decimal
+        String bin = "";
+        if(Long.parseLong(s) < 2147483647){
+          int num = Integer.parseInt(s);
+          bin = decToBin(num);
+          while(bin.length() < 32){
+            bin = "0"+bin;
+          }
+          
+        }else{
+
+          long num = Long.parseLong(s);
+          bin = decToBin(num);
+          while(bin.length() < 32){
+            bin = "0"+bin;
+          }
+     
+        }
+        
+        String[] bin2 = new String[4];
+        bin2[0] = bin.substring(0,8);
+        bin2[1] = bin.substring(8,16);
+        bin2[2] = bin.substring(16,24);
+        bin2[3] = bin.substring(24,32);
+        
+        String a = Integer.toString(binToDec(bin2[0]))+"."
+                  +Integer.toString(binToDec(bin2[1]))+"."
+                  +Integer.toString(binToDec(bin2[2]))+"."
+                  +Integer.toString(binToDec(bin2[3]));
+      
+      return a;
+      
+    }
+
+    
+	
+  
+  public static String decToBin(int numero){
+    int res = 0;
+    String binario = "";
+    while(numero > 0){
+      res = numero%2;
+      binario = Integer.toString(res) + binario;
+      numero /= 2;
+    }
+
+    while(binario.length() < 8){
+      binario = "0"+binario;
+    }
+    return binario;
+  }
+  
+  public static String decToBin(long numero){//Sobrecarga para soportar valores double
+    long res = 0;
+    String binario = "";
+    while(numero > 0){
+      res = numero%2;
+      binario = Long.toString(res) + binario;
+      numero /= 2;
+    }
+
+    while(binario.length() < 8){
+      binario = "0"+binario;
+    }
+    return binario;
+  }
+  
+  public static int binToDec(String bin){
+    int numero = 0;
+    int count = 0;
+    for(int i = bin.length() - 1; i >= 0; i--){
+      numero += Integer.parseInt(Character.toString(bin.charAt(i)))*Math.pow(2,count);
+      count++;
+    }
+    return numero;
+  }
+  
+   public static long binToLong(String bin){
+    long numero = 0;
+    long count = 0;
+    for(int i = bin.length() - 1; i >= 0; i--){
+      numero += Long.parseLong(Character.toString(bin.charAt(i)))*Math.pow(2,count);
+      count++;
+    }
+    return numero;
+  }
+    
+
+}
